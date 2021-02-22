@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>CountDown Timer</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onClick="countdown()">
+	<h1>New Year Eve</h1>
+	<div class="container">
+		<div class="counterel days">
+	  <p class="numbers" id="days">0</p>
+		<span>days</span>
+		</div>
+		
+		<div class="counterel hours">
+	  <p class="numbers" id="hours">0</p>
+		<span>hours</span>
+		</div>
+		<div class="counterel minutes">
+	  <p class="numbers" id="minutes">0</p>
+		<span>minutes</span>
+		</div>
+		<div class="counterel seconds">
+	  <p class="numbers" id="seconds">0</p>
+		<span>seconds</span>
+		</div>
+	
+	
+	</div>
+	
+	
+<script type="text/javascript" language="javascript">
+	  var dayel      = document.getElementById("days");
+	  var hoursel    = document.getElementById("hours");
+	  var minutesel  = document.getElementById("minutes");
+	  var secondsel  = document.getElementById("seconds");
+	 
+	
+     var newYear = "1 January 2022";
+	 function countdown(){
+		var newYearsDate = new Date(newYear);
+		var currentDate  = new Date();
+		var totalSeconds = (newYearsDate - currentDate) / 1000;
+		var days         = Math.floor(totalSeconds / 3600 / 24);
+		var hours        = Math.floor(totalSeconds / 3600) % 24 ;
+		var minutes      = Math.floor(totalSeconds / 60) % 60;
+		var seconds      = Math.floor(totalSeconds) % 60;
+		
+		dayel.innerHTML     = days;
+		hoursel.innerHTML   = hours;
+		minutesel.innerHTML = minutes;
+		secondsel.innerHTML = seconds;
+		
+	}
+	setInterval(countdown, 1000);
+</script>
+</body>
+</html>

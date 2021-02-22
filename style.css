@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+	
+	box-sizing: border-box;
+}
+body{
+	
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	background-image: url("newyear.jpg");
+	display: flex;
+	flex-direction: column;
+	background-size: cover;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-position: center;
+
+}
+
+h1{
+	color:darkblue;
+	font-size: 100px;
+	font-weight: 500;
+	margin:0;
+}
+
+.container{
+	
+
+display: flex;
+	
+}
+
+.numbers{
+	font-size: 100px;
+	margin: 0 2rem;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.counterel{
+	text-align: center;
+}
+
+.counterel span{
+	font-size: 25px;
+	color: brown;
+	font-weight: bold;
+}
